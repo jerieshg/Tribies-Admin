@@ -20,15 +20,19 @@ import java.util.Map;
 import spark.ModelAndView;
 import spark.template.handlebars.HandlebarsTemplateEngine;
 import static spark.Spark.get;
+import static spark.Spark.staticFileLocation;
 
 /**
- * 
+ *
  * @author JeriesHG
  * @version 1.0.0
  */
 public class ApplicationController {
-       public static void main(String args[]) {
-           
+
+    public static void main(String args[]) {
+
+        staticFileLocation("/assets");
+
         get("/", (request, response) -> {
             Map<String, Object> attributes = new HashMap<>();
             attributes.put("name", "Hello World!");
