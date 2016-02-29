@@ -61,11 +61,14 @@ public class HandlebarsTemplateEngine extends TemplateEngine {
 
         handlebars = new Handlebars(templateLoader);
 
+        /**
+         * @TODO: Uncomment this when launching to production
+         */
         // Set Guava cache.
-        Cache<TemplateSource, Template> cache = CacheBuilder.newBuilder().expireAfterWrite(10, TimeUnit.MINUTES)
-                .maximumSize(1000).build();
-
-        handlebars = handlebars.with(new GuavaTemplateCache(cache));
+//        Cache<TemplateSource, Template> cache = CacheBuilder.newBuilder().expireAfterWrite(10, TimeUnit.MINUTES)
+//                .maximumSize(1000).build();
+//
+//        handlebars = handlebars.with(new GuavaTemplateCache(cache));
     }
 
     @Override
