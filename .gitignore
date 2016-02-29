@@ -17,3 +17,4 @@ target/classes/templates/views/index.html
 target/maven-archiver/pom.properties
 target/tribies-admin-1.0/index.html
 target/test-classes/.netbeans_automatic_build
+/target/
